@@ -1,17 +1,17 @@
 {
-  "name": "@liradb2000/markdown-it-mermaid",
-  "version": "0.4.4",
-  "description": "Forked Package markdown-it-mermaid (Newely).",
+  "name": "@md-reader/markdown-it-mermaid",
+  "version": "0.5.0",
+  "description": "Forked Package markdown-it-mermaid.",
   "main": "dist/index.js",
   "scripts": {
-    "build": "webpack --progress --color",
-    "build:watch": "npm build --watch",
-    "release": "npm build -p",
-    "test": "node -r @babel/register test/index.js"
+    "dev": "tsc -p tsconfig.json -w",
+    "build": "esbuild src/index.ts --outdir=\"./dist\" --target=es6 --minify",
+    "prepublishOnly": "npm run build",
+    "test": "node test/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/liradb2000/markdown-it-mermaid.git"
+    "url": "git+https://github.com/md-reader/markdown-it-mermaid.git"
   },
   "keywords": [
     "markdown-it-plugin",
@@ -21,27 +21,20 @@
     "flowchart",
     "sequence"
   ],
-  "author": "DB KIM <https://github.com/liradb2000>",
+  "author": "Tyler Long <tyler4long@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/liradb2000/markdown-it-mermaid/issues"
+    "url": "https://github.com/md-reader/markdown-it-mermaid/issues"
   },
-  "homepage": "https://github.com/liradb2000/markdown-it-mermaid#readme",
+  "homepage": "https://github.com/md-reader/markdown-it-mermaid#readme",
   "devDependencies": {
-    "@babel/core": "^7.10.5",
-    "@babel/plugin-proposal-object-rest-spread": "^7.6.2",
-    "@babel/preset-env": "^7.10.4",
-    "@babel/preset-es2016": "^7.0.0-beta.53",
-    "@babel/register": "^7.13.16",
-    "babel-loader": "^8.1.0",
-    "markdown-it": "^8.4.2",
-    "standard": "^10.0.3",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.12",
-    "webpack-node-externals": "^2.5.0"
+    "@types/mermaid": "^8.2.9",
+    "esbuild": "^0.14.39",
+    "markdown-it": "^13.0.1",
+    "typescript": "^4.6.4"
   },
   "dependencies": {
-    "mermaid": "^8.13.0",
-    "npm": "^7.24.1"
+    "mermaid": "^9.1.1",
+    "murmurhash-js": "^1.0.0"
   }
 }

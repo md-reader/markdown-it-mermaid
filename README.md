@@ -1,19 +1,19 @@
-Mermaid plugin for markdown-it.(Forked)
+([Forked](https://github.com/liradb2000/markdown-it-mermaid))[Mermaid plugin for markdown-it](https://github.com/tylingsoft/markdown-it-mermaid).
 
-## 0.4.4
--   Update [Mermaid-js](https://mermaid-js.github.io/mermaid/#/) 8.13.0
+## 0.5.0
+-   Update [Mermaid-js](https://mermaid-js.github.io/mermaid/#/) 9.0.0+
 
 ## Installation
 
 ```
-npm install @liradb2000/markdown-it-mermaid
+npm install @md-reader/markdown-it-mermaid
 ```
 
 ## Usage
 
 ```js
 import markdownIt from "markdown-it";
-import markdownItMermaid from "@liradb2000/markdown-it-mermaid";
+import markdownItMermaid from "@md-reader/markdown-it-mermaid";
 const mdi = markdownIt();
 mdi.use(markdownItMermaid);
 mdi.render(`~~~mermaid
@@ -36,7 +36,7 @@ but either `~~~` or ` ``` ` works.
 
 ```js
 import MarkdownIt from 'markdown-it';
-import MarkdownItKatex from '@liradb2000/markdown-it-mermaid';
+import MarkdownItMermaid from '@md-reader/markdown-it-mermaid';
 
 var md = MarkdownIt({
         html: false,
@@ -76,7 +76,7 @@ graph TD (<- Replacable)
 ```
 ````
 
--   Example  
+-   Example
 If you setup like below,
 ```javascript
 md.use(MarkdownItMermaid,{
@@ -94,7 +94,7 @@ md.use(MarkdownItMermaid,{
 you can use like
 ````
 ```diagram
-gra TD 
+gra TD
     A[Christmas] -->|Get money| B(Go shopping)
     B --> C{Let me think}
     C -->|One| D[Laptop]
